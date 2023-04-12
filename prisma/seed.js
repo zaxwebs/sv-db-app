@@ -8,11 +8,19 @@ async function main() {
 			email: 'alice@prisma.io',
 			name: 'Alice',
 			posts: {
-				create: {
-					title: 'Check out Prisma with Next.js',
-					content: 'https://www.prisma.io/nextjs',
-					published: true,
-				},
+				create: [
+					{
+						title: 'To That End',
+						content: 'First, have a definite, clear practical ideal; a goal, an objective. Second, have the necessary means to achieve your ends; wisdom, money, materials, and methods. Third, adjust all your means to that end.',
+						published: true,
+					},
+					{
+						title: 'Leave A Trail',
+						content: 'Do not go where the path may lead, go instead where there is no path and leave a trail.',
+						published: true,
+					},
+				]
+
 			},
 		},
 	})
@@ -25,13 +33,8 @@ async function main() {
 			posts: {
 				create: [
 					{
-						title: 'Follow Prisma on Twitter',
-						content: 'https://twitter.com/prisma',
-						published: true,
-					},
-					{
-						title: 'Follow Nexus on Twitter',
-						content: 'https://twitter.com/nexusgql',
+						title: 'Goals Ridiculously High',
+						content: 'If you set your goals ridiculously high and it\'s a failure, you will fail above everyone else\'s success.',
 						published: true,
 					},
 				],

@@ -1,4 +1,5 @@
 <script>
+    export let id;
     export let title;
     export let content;
     export let author;
@@ -11,5 +12,6 @@
             {content}
         </p>
         <p class="card-text"><small class="text-muted">Post by {author.name}</small></p>
+        <a href="/{id}" class="btn btn-light btn-sm">View Post</a>
     </div>
 </div>
