@@ -11,7 +11,8 @@
         <p class="card-text">
             {content}
         </p>
-        <p class="card-text"><small class="text-muted">Post by {author.name}</small></p>
-        <a href="/{id}" class="btn btn-light btn-sm">View Post</a>
+        <p class="card-text"><small class="text-muted">{author.name}</small></p>
+        <a href="/{id}" class="btn btn-light btn-sm">View</a>
+        <a href="/update/{id}" class="btn btn-light btn-sm">Update</a>
     </div>
 </div>
