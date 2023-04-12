@@ -10,25 +10,27 @@ export const load = async ({ params: { id } }) => {
 	return { ...post };
 }
 
-export const actions = {
-	default: async ({ request, params: { id } }) => {
-		const data = await request.formData();
-		const title = data.get('title');
-		const content = data.get('content');
-		if (!title || !content) {
-			return fail(401, { error: 'Please fill in all fields.', title, content });
-		}
-
-		await prisma.post.update({
-			where: {
-				id: Number(id)
-			},
-			data: {
-				title,
-				content
-			},
-		});
-
-		throw redirect(303, `/`)
+const updatePost = async ({ request, params: { id } }) => {
+	const data = await request.formData();
+	const title = data.get('title');
+	const content = data.get('content');
+	if (!title || !content) {
+		return fail(401, { error: 'Please fill in all fields.', title, content });
 	}
+
+	await prisma.post.update({
+		where: {
+			id: Number(id)
+		},
+		data: {
+			title,
+			content
+		},
+	});
+
+	throw redirect(303, `/`)
+}
+
+export const actions = {
+	default: updatePost
 }

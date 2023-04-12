@@ -12,7 +12,6 @@
             {content}
         </p>
         <p class="card-text"><small class="text-muted">{author.name}</small></p>
-        <a href="/{id}" class="btn btn-light btn-sm">View</a>
         <a href="/update/{id}" class="btn btn-light btn-sm">Update</a>
     </div>
 </div>

@@ -3,7 +3,7 @@
     export let form;
 </script>
 
-<h1 class="mb-3">Create Post</h1>
+<h1 class="mb-3">Update Post</h1>
 {#if form?.error}
     <div class="alert alert-danger" role="alert">{form.error}</div>
 {/if}
