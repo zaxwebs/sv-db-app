@@ -1,4 +1,5 @@
 <script>
+    import Post from '$lib/components/Post.svelte';
     export let data;
 </script>
 
@@ -7,15 +8,7 @@
     <main>
         <div>
             {#each data.feed as post (post.id)}
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">{post.title}</h5>
-                        <p class="card-text">
-                            {post.author.name}
-                        </p>
-                        <a href={post.content} class="btn btn-primary">Read Blog</a>
-                    </div>
-                </div>
+                <Post title={post.title} content={post.content} author={post.author} />
             {/each}
         </div>
     </main>
