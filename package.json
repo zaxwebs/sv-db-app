@@ -1,6 +1,9 @@
 {
 	"name": "sv-db-app",
 	"version": "0.0.1",
+	"prisma": {
+		"seed": "node prisma/seed.js"
+	  },
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
