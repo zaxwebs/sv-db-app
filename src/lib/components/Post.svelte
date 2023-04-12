@@ -10,5 +10,6 @@
         <p class="card-text">
             {content}
         </p>
+        <p class="card-text"><small class="text-muted">Post by {author.name}</small></p>
     </div>
 </div>
