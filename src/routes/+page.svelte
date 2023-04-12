@@ -1,16 +1,22 @@
 <script>
-  export let data;
+    export let data;
 </script>
 
 <div class="container py-5">
-  <h1>My Blog</h1>
-  <main>
-    <div>
-      {#each data.feed as post (post.id)}
-        <h3>{post.title}</h3>
-		<div>{post.content}</div>
-		<div>{post.author.name}</div>
-      {/each}
-    </div>
-  </main>
+    <h1 class="mb-3">My Blog</h1>
+    <main>
+        <div>
+            {#each data.feed as post (post.id)}
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">{post.title}</h5>
+                        <p class="card-text">
+                            {post.author.name}
+                        </p>
+                        <a href={post.content} class="btn btn-primary">Read Blog</a>
+                    </div>
+                </div>
+            {/each}
+        </div>
+    </main>
 </div>
